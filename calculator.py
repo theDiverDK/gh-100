@@ -7,21 +7,21 @@ def calculate(first_number, operator, second_number):
         return first_number * second_number
     if operator == "/":
         if second_number == 0:
-            raise ZeroDivisionError("Division med nul er ikke tilladt.")
+            raise ZeroDivisionError("Division by zero is not allowed.")
         return first_number / second_number
-    raise ValueError("Ugyldig operator. Brug +, -, * eller /.")
+    raise ValueError("Invalid operator. Use +, -, * or /.")
 
 
 def main():
-    print("Regnemaskine (skriv 'q' for at afslutte)")
+    print("Calculator (type 'q' to quit)")
     while True:
-        raw = input("Indtast: tal operator tal (fx 2 + 3): ").strip()
+        raw = input("Enter: number operator number (e.g., 2 + 3): ").strip()
         if raw.lower() == "q":
             break
 
         parts = raw.split()
         if len(parts) != 3:
-            print("Ugyldigt format. Prøv igen.")
+            print("Invalid format. Try again.")
             continue
 
         left, operator, right = parts

@@ -1,7 +1,7 @@
 # gh-100
 demo
 
-Et simpelt Python-program som fungerer som en regnemaskine:
+A simple Python program that works as a calculator:
 
 ```bash
 python calculator.py
