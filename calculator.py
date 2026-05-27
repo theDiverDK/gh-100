@@ -27,7 +27,7 @@ def main():
         left, operator, right = parts
         try:
             result = calculate(float(left), operator, float(right))
-            if result.is_integer():
+            if isinstance(result, float) and result.is_integer():
                 print(int(result))
             else:
                 print(result)
